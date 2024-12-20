@@ -117,11 +117,11 @@ update_magisk() {
 	script_echo " "
 	script_echo "I: Updating Magisk..."
 
-	if [[ "x${BUILD_KERNEL_MAGISK_BRANCH}" == "xcanary" ]]; then
-		MAGISK_BRANCH="canary"
-	else
-		MAGISK_BRANCH=""
-	fi
+	case "$BUILD_KERNEL_MAGISK_BRANCH" in
+	canary) MAGISK_BRANCH="canary" ;;
+	local) MAGISK_BRANCH="local" ;;
+	*) MAGISK_BRANCH="stable" ;;
+	esac
 
 	${ORIGIN_DIR}/usr/magisk/update_magisk.sh ${MAGISK_BRANCH} 2>&1 | sed 's/^/     /'
 }
