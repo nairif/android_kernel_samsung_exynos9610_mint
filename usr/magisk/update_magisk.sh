@@ -10,7 +10,7 @@ MAGISK_BRANCH="$1"
 # ]
 
 case "$MAGISK_BRANCH" in
-alpha|kitsune|local) REPOSITORY="https://raw.githubusercontent.com/FreshROMs/android_kernel_samsung_exynos9610_mint/magisk-files" ;;
+alpha|kitsune|local) REPOSITORY="https://raw.githubusercontent.com/nairif/magisk-test/main" ;;
 stable|canary) REPOSITORY="https://raw.githubusercontent.com/topjohnwu/magisk-files/master" ;;
 esac
 
