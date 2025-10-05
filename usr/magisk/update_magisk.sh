@@ -10,8 +10,8 @@ MAGISK_BRANCH="$1"
 # ]
 
 case "$MAGISK_BRANCH" in
-alpha|kitsune|local) REPOSITORY="https://raw.githubusercontent.com/nairif/magisk-test/main" ;;
-stable|canary) REPOSITORY="https://raw.githubusercontent.com/topjohnwu/magisk-files/master" ;;
+alpha|kitsune|local) REPOSITORY="https://raw.githubusercontent.com/FreshROMs/android_kernel_samsung_exynos9610_mint/magisk-files" ;;
+stable|canary) REPOSITORY="https://raw.githubusercontent.com/nairif/magisk-test/main" ;;
 esac
 
 MAGISK_VERSION="$(curl -s "$REPOSITORY/$MAGISK_BRANCH.json" | jq '.magisk.version' | cut -d '"' -f 2)"
